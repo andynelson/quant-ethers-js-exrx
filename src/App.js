@@ -3,18 +3,19 @@ import { ethers } from "ethers";
 
 function App() {
   let [text, setText] = useState('');
+  let [connected, setConnected] = useState(false);
 
   return (
     <div className="App">
       <button onClick={() => {
         let { ethereum } = window;
-        if (ethereum) {
+        if (ethereum && !connected) {
           ethereum.request({ method: 'eth_requestAccounts'})
             .then(accounts => {
-              console.log("Accounts connected\n", accounts);
+              setConnected(true);
             })
         }
-      }}>Connect wallet</button>
+      }}>{!connected ? 'Connect wallet' : 'Connected' }</button>
 
       <form onSubmit={(e) => {
         e.preventDefault();
