@@ -9,8 +9,8 @@ The frontend should have the following features:
 [ ] A button, to retrieve the text in the smart contract 
 
 Our solidity contract will have the following features:
-* a string variable that stores the text
-* a function that changes the string variable
+[ ] a string variable that stores the text
+[ ] a function that changes the string variable
 
 The string variable will be public. Making it public saves the effort of creating a function to returns it.
 
