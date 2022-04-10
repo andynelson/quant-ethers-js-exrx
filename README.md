@@ -4,9 +4,9 @@ Extra packages to install:
 * Ethers.js
 
 The frontend should have the following features:
-* A connect wallet button, for connecting the app to the wallet
-* A form, for setting the text on a smart contract
-* A button, to retrieve the text in the smart contract 
+[x] A connect wallet button, for connecting the app to the wallet
+[ ] A form, for setting the text on a smart contract
+[ ] A button, to retrieve the text in the smart contract 
 
 Our solidity contract will have the following features:
 * a string variable that stores the text
