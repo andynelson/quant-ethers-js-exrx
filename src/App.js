@@ -11,7 +11,7 @@ function App() {
         if (ethereum) {
           ethereum.request({ method: 'eth_requestAccounts'})
             .then(accounts => {
-              setConnected(true);
+              console.log("Accounts connected\n", accounts);
             })
         }
       }}>Connect wallet</button>
