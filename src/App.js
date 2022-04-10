@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={() => {
+        let { ethereum } = window;
+        if (ethereum) {
+          ethereum.request({ method: 'eth_requestAccounts'})
+            .then(accounts => {
+              console.log("Accounts connected\n", accounts);
+            })
+        }
+      }}>Connect wallet</button>
     </div>
   );
 }
