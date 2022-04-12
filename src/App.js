@@ -23,7 +23,7 @@ function App() {
     <div className="App">
  
       <button onClick={() => {
-          if (contract && connected) {
+          if (contract && !connected) {
               ethereum.request({ method: 'eth_requestAccounts'})
                   .then(accounts => {
                       setConnected(true);
