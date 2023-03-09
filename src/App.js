@@ -56,12 +56,10 @@ function App() {
       </form>
  
       <button onClick={() => {
-console.log({contract})
         if (contract && connected) {
           contract.supply()
             .then(text => {
               text = text.toString()
-console.log({text})
               setSavedText(text);
             })
         }
