@@ -2,8 +2,8 @@ import { useState } from "react";
 import { ethers } from "ethers";
  
 function App() {
-  let [text, setText] = useState("");
-  let [savedText, setSavedText] = useState("");
+  let [supply, setSupply] = useState("");
+  let [savedSupply, setSavedSupply] = useState("");
   let [connected, setConnected] = useState(false);
  
   let { ethereum } = window;
@@ -58,14 +58,14 @@ function App() {
       <button onClick={() => {
         if (contract && connected) {
           contract.supply()
-            .then(text => {
-              text = text.toString()
-              setSavedText(text);
+            .then(supply => {
+              supply = supply.toString()
+              setSavedSupply(supply);
             })
         }
-      }}>Get Text</button>
+      }}>Get Supply</button>
  
-      <h3>{savedText} Tomatoes</h3>
+      <h3>{savedSupply} Tomatoes</h3>
     </div>
   );
 }
