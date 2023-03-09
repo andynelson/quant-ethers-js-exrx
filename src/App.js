@@ -11,10 +11,22 @@ function App() {
  
   if (ethereum) {
  
+    /*
     let abi = JSON.parse('[{"inputs": [{"internalType": "string","name": "newText","type": "string"}],"name": "changeText","outputs": [],"stateMutability": "nonpayable","type": "function"},{"inputs": [],"stateMutability": "nonpayable","type": "constructor"},{"inputs": [],"name": "text","outputs": [{"internalType": "string","name": "","type": "string"}],"stateMutability": "view","type": "function"}]')
  
 console.log({abi})
-    let abi = 
+
+    const iface = new ethers.utils.Interface(abi);
+console.log(
+    iface.format(ethers.utils.FormatTypes.minimal)
+)
+*/
+
+    let abi = [
+      "function changeText(string)",
+      "constructor()",
+      "function text() view returns (string)"
+    ]
 
     let address = "0x4Caf1386ce9Bb0b2Dd81972412e44a0263FA4908";
     let provider = new ethers.providers.Web3Provider(ethereum);
