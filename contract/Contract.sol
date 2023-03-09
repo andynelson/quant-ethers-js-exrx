@@ -11,4 +11,4 @@ contract Contract {
     function changeText(string memory newText) public {
         text = newText;
     }
-}
+

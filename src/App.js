@@ -12,12 +12,12 @@ function App() {
   if (ethereum) {
  
     let abi = [
-      "function changeText(string)",
-      "constructor()",
-      "function text() view returns (string)"
+      "function grow()",
+      "function eat()",
+      "function supply() view returns (uint)"
     ]
 
-    let address = "0x4Caf1386ce9Bb0b2Dd81972412e44a0263FA4908";
+    let address = "0x2a9ca3dc2eb60487993300eb15099c3e1f1c69f4";
     let provider = new ethers.providers.Web3Provider(ethereum);
     let signer = provider.getSigner();
     contract = new ethers.Contract(address, abi, signer);
@@ -38,20 +38,34 @@ function App() {
       <form onSubmit={(e) => {
         e.preventDefault();
         if (contract && connected) {
-          contract.changeText(text)
+          contract.grow()
             .then(() => {
               setText("");
             });
         }
       }}>
-          <input type="text" placeholder="Enter text" onChange={e => setText(e.currentTarget.value)} value={text} />
-          <input type="submit" value="save to contract" />
+          <input type="submit" value="grow" />
+      </form>
+
+      <form onSubmit={(e) => {
+        e.preventDefault();
+        if (contract && connected) {
+          contract.eat()
+            .then(() => {
+              setText("");
+            });
+        }
+      }}>
+          <input type="submit" value="eat" />
       </form>
  
       <button onClick={() => {
+console.log({contract})
         if (contract && connected) {
-          contract.text()
+          contract.supply()
             .then(text => {
+              text = text.toString()
+console.log({text})
               setSavedText(text);
             })
         }
