@@ -6,8 +6,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background: url('https://www.pngmart.com/files/1/Tomatoes-PNG.png');
+  background: url('https://www.pngmart.com/files/16/Red-Fresh-Tomatoes-Bunch-PNG-Transparent-Image.png');
+}
 
+html {
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+  color: #efefef;
 }
 
 code {
@@ -17,4 +21,8 @@ code {
 
 button, input {
   margin: 10px 0;
+}
+
+h3 {
+  margin: 3px 0 90vh;
 }

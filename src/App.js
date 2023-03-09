@@ -41,24 +41,18 @@ function App() {
         e.preventDefault();
         if (contract && connected) {
           contract.grow()
-            .then(() => {
-              setText("");
-            });
         }
       }}>
-          <input type="submit" value="grow" />
+          <input type="submit" value="Grow" />
       </form>
 
       <form onSubmit={(e) => {
         e.preventDefault();
         if (contract && connected) {
           contract.eat()
-            .then(() => {
-              setText("");
-            });
         }
       }}>
-          <input type="submit" value="eat" />
+          <input type="submit" value="Eat" />
       </form>
  
       <button onClick={() => {
@@ -73,7 +67,7 @@ console.log({text})
         }
       }}>Get Text</button>
  
-      <span>{savedText}</span>
+      <h3>{savedText} Tomatoes</h3>
     </div>
   );
 }
