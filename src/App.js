@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App">
 
-      <h1>Tomato Farm</h1>
+      <h1>Tomato Garden</h1>
  
       <button onClick={() => {
           if (contract && !connected) {
