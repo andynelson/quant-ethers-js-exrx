@@ -13,7 +13,9 @@ function App() {
  
     let abi = JSON.parse('[{"inputs": [{"internalType": "string","name": "newText","type": "string"}],"name": "changeText","outputs": [],"stateMutability": "nonpayable","type": "function"},{"inputs": [],"stateMutability": "nonpayable","type": "constructor"},{"inputs": [],"name": "text","outputs": [{"internalType": "string","name": "","type": "string"}],"stateMutability": "view","type": "function"}]')
  
-    let address = "0x2c0d9cc3e4D4eC872d782D7D530D30308AF41ed3";
+console.log({abi})
+
+    let address = "0x4Caf1386ce9Bb0b2Dd81972412e44a0263FA4908";
     let provider = new ethers.providers.Web3Provider(ethereum);
     let signer = provider.getSigner();
     contract = new ethers.Contract(address, abi, signer);
