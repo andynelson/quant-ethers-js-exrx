@@ -1,33 +1,12 @@
-# Create a Dapp with Solidity, React, and Ethers
+# Ethers.js dApp
 
-Extra packages to install: 
-* Ethers.js
+In this [repo](https://github.com/ExtropyIO/quant-ethers-js-exrx) there is a sample Ethers.js dApp. It works with TomatoGarden contract deployed on Sepolia test network. It allows to check the supply, grow and eat tomatoes.
 
-The frontend should have the following features:
+Your task is to make the app work with BananaShop contract deployed to Sepolia network. It should allow user buy and check his banana balance.
 
-* A connect wallet button to connect the app to the wallet
-* A form to set the text on a smart contract
-* A button to retrieve the text in the smart contract 
+BananaShop is deployed on Sepolia at address: 0xf8a18cb3c2c5e7814eBa20b36b9033E78cE5C2d6
 
-Our solidity contract will have the following features:
-* a string variable that stores the text
-* a function that changes the string variable
-
-The string variable will be public. Making it public saves the effort of creating a function to return it.
-
-By default, the string variable will be "Hello," and anyone can change the value to anything. 
-
-We will be creating the smart contract with remix ide. So we do the following:
-1. Verify that we installed MetaMask in the browser
-2. Create a new Account/Wallet
-3. Connect to a test network
-4. Fund the account
-5. Open remix IDE
-6. Create a new Solidity file in the contracts folder
-7. Write the described contract in the file
-8. Compile the contract
-9. Deploy the contract
-10. Test the contract
-11. Copy the ABI and bytecode into a file
-
-The test network we will be using here is Rinkeby
+To run the dApp:
+1. Clone the repository
+1. `yarn`
+1. `yarn start`
