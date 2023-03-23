@@ -8,5 +8,6 @@ BananaShop is deployed on Sepolia at address: 0xf8a18cb3c2c5e7814eBa20b36b9033E7
 
 To run the dApp:
 1. Clone the repository
-1. `yarn`
-1. `yarn start`
+2. enable corepack `corepack enable`
+3. install packages `yarn`
+4. start the app `yarn start`
